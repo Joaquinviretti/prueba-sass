@@ -1,0 +1,330 @@
+
+@import "./base/reset";
+
+// layout
+@import "./layout/navbar";
+
+
+
+/**** estilos globales ****/
+body {
+    display: grid;
+    grid-template-columns: 150px 3fr 1fr;
+    grid-template-rows: 100px 300px 1fr 20%;
+    grid-template-areas:
+        "nav header header"
+        "nav main aside"
+        "nav main aside"
+        "nav footer footer";
+    font-family: "Inter", sans-serif;
+    background-color: #fffcf2;
+}
+
+/* button */
+.button {
+    background-color: #eb5e28;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/**** header ****/
+header {
+    background-color: #eb5e28;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    align-self: stretch;
+}
+
+header .logo {
+    width: 70px;
+}
+
+/* nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    grid-area: main;
+}
+
+/**** aside ****/
+aside {
+    padding: 20px;
+}
+
+aside h2 {
+    margin-bottom: 40px;
+}
+
+aside article {
+    margin-bottom: 35px;
+}
+
+aside article img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+/**** portada ****/
+#portada {
+    color: #252422;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#portada h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#portada p {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin: 40px 0;
+}
+
+.marca {
+    font-weight: bold;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #b1aba0;
+}
+
+/**** servicios ****/
+#servicios {
+    color: #252422;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#servicios h2 {
+    text-align: center;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    max-width: 1300px;
+}
+
+.cardServicio {
+    background-color: white;
+    color: black;
+    width: 30%;
+    padding: 15px;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.cardServicio img {
+    height: 120px;
+    padding-top: 15px;
+}
+
+.cardServicio p {
+    /* quitar */
+    margin: 20px 0;
+}
+
+/**** footer ****/
+footer {
+    background-color: #ccc5b9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    grid-area: footer;
+}
+
+footer h4 {
+    margin-bottom: 20px;
+}
+
+.footerEnlaces ul {
+    list-style: none;
+}
+
+.footerRedes {
+    width: 15%;
+}
+
+.footerRedes ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.footerRedes img {
+    width: 30px;
+}
+
+.footerEnlaces a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerColumns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newsletter input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.newsletter button {
+    margin-top: 15px;
+    border: none;
+    background-color: #252422;
+}
+
+.copyright {
+    padding-top: 20px;
+    width: 100%;
+    border-top: 2px solid #b1aba0;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* TABLET: hasta 1024px */
+@media (max-width: 1024px) {
+
+    body {
+        grid-template-rows: 100px 300px 1fr auto 20%;
+        grid-template-columns: 150px 2fr 1fr;
+        grid-template-areas:
+            "nav header header"
+            "nav main main"
+            "nav main main"
+            "nav aside aside"
+            "nav footer footer";
+    }
+
+    aside {
+        margin-top: 50px;
+    }
+
+    aside .novedadesContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    aside .novedadesContainer article {
+        width: 30%;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .cardsContainer .cardServicio {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .novedadesContainer article img {
+        width: 80%;
+    }
+
+    .footerColumns {
+        flex-wrap: wrap;
+    }
+
+    .footerContacto, .footerEnlaces, .footerRedes, .newsletter {
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    .footerRedes ul {
+        width: 50%;
+    }
+
+    .newsletter form {
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footerColumns {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footerContacto, .footerEnlaces, .footerRedes, .newsletter {
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    aside .novedadesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside .novedadesContainer article {
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    aside .novedadesContainer article p {
+        margin-left: 20px;
+    }
+
+    aside .novedadesContainer article img {
+        width: 50%;
+    }
+
+
+}

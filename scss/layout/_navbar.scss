@@ -1,0 +1,17 @@
+nav {
+    grid-area: nav;
+    background-color: #252422;
+    color: white;
+    position: fixed;
+    height: 100%;
+    width: 150px;
+    padding-left: 20px;
+
+    ul li {
+        padding: 20px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

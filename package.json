@@ -1,0 +1,21 @@
+{
+  "name": "ifix-proyecto-coder",
+  "version": "1.0.0",
+  "description": "1 - git init ¡En la ruta de mi proyecto, donde tengo el index!\r (borrar repositorio inicializado: rm -fr .git)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./scss/main.scss ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquinviretti/prueba-sass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquinviretti/prueba-sass/issues"
+  },
+  "homepage": "https://github.com/Joaquinviretti/prueba-sass#readme"
+}
